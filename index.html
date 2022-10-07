@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="theme-color" content="#ff7d1a">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Letícia Rodrigues - Dev Front-end">
+  <meta name="keywords"
+    content="site,criação site,desenvolvimento web,página,fazer site,html,css,javascprit,slides,slider,carrossel,android,ios,windows phone,mobile,software,slider leticia,leticia rodrigues,projetos leticia,apple,windows,linux,ubuntu">
+  <meta name="title" content="Letícia Rodrigues | Coding Bootcamp Testimonials Slider">
+  <meta name="description" content="Letícia Rodrigues - desenvolvedora front-end.">
+
+  <title>Letícia Rodrigues | Ecommerce Product Page</title>
+</head>
+
+<body class="bg-white md:container md:px-16 mx-auto">
+  <div id="bg-escuro" class="hidden bg-black/50 w-screen h-screen absolute top-0 left-0 z-50">
+  </div>
+  <header class="relative w-full justify-between flex p-6 md:py-6 md:px-0">
+    <div class="flex md:flex-row-reverse items-center gap-4 lg:gap-10 xl:gap-12">
+      <nav id="nav" class="z-50">
+        <div class="relative">
+          <div id="menu-hamburguer"
+            class="w-fit h-fit opacity-100 md:hidden translate-y-0 rotate-0 transition-transform duration-500 ease-out">
+            <img src="assets/images/icon-menu.svg" alt="Ícone menu hambúrguer" class="cursor-pointer">
+          </div>
+          <div id="fechar-menu"
+            class="absolute scale-125 inset-0 h-fit w-fit opacity-0 translate-y-1/4 rotate-45 transition-all duration-500 ease-out z-50">
+            <img src="assets/images/icon-close.svg" alt="Ícone Fechar" class="cursor-pointer">
+          </div>
+        </div>
+        <ul id="menu"
+          class="opacity-0 md:opacity-100 transition-transform duration-500 -translate-x-[400px] md:translate-x-0 absolute top-0 left-0 bg-white md:bg-transparent px-6 pt-24 md:pt-0 w-2/3 sm:w-1/2 h-screen md:w-auto md:h-auto md:relative md:flex md:gap-4 lg:gap-8 font-kumbh font-semibold md:font-normal text-lg md:text-sm text-azul-escuro md:text-azul-escuro-acinzentado">
+          <li
+            class="pb-4 md:pb-0 hover:scale-105 hover:text-azul-escuro hover:border-solid hover:border-b-2 hover:border-laranja">
+            <a href="#">Coleções</a></li>
+          <li
+            class="pb-4 md:pb-0 hover:scale-105 hover:text-azul-escuro hover:border-solid hover:border-b-2 hover:border-laranja">
+            <a href="#">Masculino</a></li>
+          <li
+            class="pb-4 md:pb-0 hover:scale-105 hover:text-azul-escuro hover:border-solid hover:border-b-2 hover:border-laranja">
+            <a href="#">Feminino</a></li>
+          <li
+            class="pb-4 md:pb-0 hover:scale-105 hover:text-azul-escuro hover:border-solid hover:border-b-2 hover:border-laranja">
+            <a href="#">Sobre</a></li>
+          <li
+            class="pb-4 md:pb-0 hover:scale-105 hover:text-azul-escuro hover:border-solid hover:border-b-2 hover:border-laranja">
+            <a href="#">Contato</a></li>
+        </ul>
+      </nav>
+      <img src="assets/images/logo.svg" alt="Logo Sneakers" class="w-3/4">
+    </div>
+    <div class="flex justify-center items-center gap-6 relative">
+      <div class="relative">
+        <img id="carrinho" src="assets/images/icon-cart.svg" alt="Ícone carrinho" class="cursor-pointer">
+        <span id="qtd-carrinho" class="hidden absolute -top-2 -right-2 rounded-full bg-laranja font-kumbh font-semibold text-[10px] text-white text-center w-4">1</span>
+      </div>
+      <div class="w-8 md:w-10 lg:w-12 rounded-full border-solid border-2 border-laranja cursor-pointer">
+        <img src="assets/images/image-avatar.png" alt="Avatar perfil" class="object-cover">
+      </div>
+    </div>
+    <div id="modal-carrinho"
+      class="hidden absolute -left-1/2 -right-1/2 md:right-0 md:left-96 lg:-right-44 xl:left-2/4 xl:-rigth-3/4 top-24 md:top-20 bg-white w-[96%] md:w-[40%] lg:w-[30%] h-64 md:h-48 z-[9999] mx-auto rounded-xl md:rounded-lg flex-col shadow-xl">
+      <div class="h-1/4 flex items-center justify-start pl-6">
+        <p class="font-kumbh font-bold text-start text-base md:text-sm text-azul-escuro">Carrinho</p>
+      </div>
+      <hr>
+      <div class="h-3/4 flex items-center justify-center">
+        <p class="font-kumbh font-bold text-start text-lg md:text-base text-azul-escuro-acinzentado">Seu carrinho está
+          vazio!</p>
+      </div>
+    </div>
+    <div id="modal-carrinho-cheio"
+      class="hidden absolute -left-1/2 -right-1/2 md:right-0 md:left-96 lg:-right-44 xl:left-2/4 xl:-rigth-3/4 top-24 md:top-20 bg-white w-[96%] md:w-[40%] lg:w-[30%] h-64 md:h-48 z-[9999] mx-auto rounded-xl md:rounded-lg flex-col shadow-xl">
+      <div class="h-1/4 flex items-center justify-start pl-6">
+        <p class="font-kumbh font-bold text-start text-base md:text-sm text-azul-escuro">Carrinho</p>
+      </div>
+      <hr>
+      <div class="h-3/4 w-full flex flex-col items-center justify-center gap-4">
+        <div class="w-full px-6 flex items-center justify-between">
+          <div class="rounded-md overflow-hidden w-16 md:w-12">
+            <img src="assets/images/image-product-1-thumbnail.jpg" alt="miniatura produto">
+          </div>
+          <div class="flex flex-col gap-1">
+            <p class="font-kumbh font-normal text-base md:text-sm text-start text-azul-escuro-acinzentado">Fall Limited Edition
+              Sneakers</p>
+            <div class="flex items-center gap-4">
+              <p class="font-kumbh font-normal text-base md:text-sm text-start text-azul-escuro-acinzentado">$125.00 x <span id="label-qtd-produto" class="w-4">0</span></p>
+              <p id="preco-total" class="font-kumbh font-bold text-base md:text-sm text-start text-azul-escuro">$0.00</p>
+            </div>
+          </div>
+          <div id="delete" class="cursor-pointer">
+            <img src="assets/images/icon-delete.svg" alt="ícone lixeira">
+          </div>
+        </div>
+        <div class="w-full px-6">
+          <button type="button" name="Finalizar"
+            class="bg-laranja w-full py-3 rounded-lg font-kumbh font-bold text-center text-base text-white">Finalizar</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <hr class="hidden md:flex pb-20">
+
+  <main class="md:px-8 lg:px-16 md:flex md:items-center md:gap-16 lg:gap-20 xl:gap-28">
+    <section class="md:w-1/2">
+      <div class="relative mx-auto">
+        <div class="slides w-full h-full md:rounded-xl overflow-hidden">
+          <img src="assets/images/image-product-1.jpg" alt="Imagem produto" class="object-cover">
+        </div>
+        <div class="slides w-full h-full md:rounded-xl overflow-hidden">
+          <img src="assets/images/image-product-2.jpg" alt="Imagem produto" class="object-cover object-top">
+        </div>
+        <div class="slides w-full h-full md:rounded-xl overflow-hidden">
+          <img src="assets/images/image-product-3.jpg" alt="Imagem produto" class="object-cover object-top">
+        </div>
+        <div class="slides w-full h-full md:rounded-xl overflow-hidden">
+          <img src="assets/images/image-product-4.jpg" alt="Imagem produto" class="object-cover">
+        </div>
+
+        <div class="z-30 absolute flex justify-between top-1/2 w-full px-3">
+          <button id="prev" name="botao voltar" class="bg-white rounded-full p-3 md:p-2 lg:p-3">
+            <img src="assets/images/icon-previous.svg" alt="ícone voltar">
+          </button>
+          <button id="next" name="botao avançar" class="bg-white rounded-full p-3 md:p-2 lg:p-3">
+            <img src="assets/images/icon-next.svg" alt="ícone avançar">
+          </button>
+        </div>
+
+      </div>
+      <div class="hidden md:grid grid-cols-4 gap-6 pt-6">
+        <div class="thumbnails rounded-lg w-full h-full overflow-hidden cursor-pointer bg-white">
+          <img src="assets/images/image-product-1-thumbnail.jpg" alt="thumbnail produto" class="object-cover hover:opacity-40">
+        </div>
+        <div class="thumbnails rounded-lg w-full h-full overflow-hidden cursor-pointer bg-white">
+          <img src="assets/images/image-product-2-thumbnail.jpg" alt="thumbnail produto" class="object-cover hover:opacity-40">
+        </div>
+        <div class="thumbnails rounded-lg w-full h-full overflow-hidden cursor-pointer bg-white">
+          <img src="assets/images/image-product-3-thumbnail.jpg" alt="thumbnail produto" class="object-cover hover:opacity-40">
+        </div>
+        <div class="thumbnails rounded-lg w-full h-full overflow-hidden cursor-pointer bg-white">
+          <img src="assets/images/image-product-4-thumbnail.jpg" alt="thumbnail produto" class="object-cover hover:opacity-40">
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full md:w-1/2 px-6 md:px-0">
+      <h1
+        class="font-kumbh font-bold text-xs text-start text-laranja uppercase tracking-widest pt-8 md:pt-0 pb-4 md:pb-2 lg:pb-4">
+        Sneaker
+        Company</h1>
+      <h2
+        class="font-kumbh font-bold text-[32px] md:text-2xl lg:text-4xl leading-tight text-start text-azul-escuro pb-6 md:pb-4 lg:pb-8">
+        Fall Limited Edition
+        Sneakers</h2>
+      <p class="font-kumbh font-normal text-base md:text-sm lg:text-base text-start text-azul-escuro-acinzentado">These
+        low-profile sneakers are
+        your perfect casual wear companion. Featuring a durable rubber outer sole,
+        they'll withstand everything the weather can ofter.</p>
+      <div
+        class="flex lg:flex-col items-center lg:items-start justify-between lg:justify-start w-full lg:gap-2 pt-8 lg:pt-6">
+        <div class="flex items-center justify-start gap-4">
+          <p class="font-kumbh font-bold text-3xl md:text-2xl lg:text-3xl text-start text-azul-escuro">$125.00</p>
+          <p
+            class="font-kumbh font-bold text-base md:text-sm text-center text-laranja bg-laranja-claro px-2 rounded-sm">
+            50%</p>
+        </div>
+        <p
+          class="font-kumbh font-bold text-base md:text-sm text-end text-azul-escuro-acinzentado opacity-50 line-through">
+          $250.00</p>
+      </div>
+      <div class="flex flex-col lg:flex-row gap-3 pt-6">
+        <div class="flex items-center justify-center w-full lg:w-1/3 py-4 bg-azul-claro-acinzentado rounded-xl">
+          <img id="diminuir" src="assets/images/icon-minus.svg" alt="ícone subtração" class="cursor-pointer">
+          <label for="quantidade" class="hidden">Quantidade</label>
+          <input id="quantidade" type="number" name="quantidade" value="1" aria-labelledBy="quantidade"
+            class="w-2/3 font-kumbh font-bold text-center text-base text-azul-escuro-acinzentado bg-transparent outline-none">
+          <img id="aumentar" src="assets/images/icon-plus.svg" alt="ícone soma" class="cursor-pointer">
+        </div>
+        <button id="add-carrinho" name="adicionar ao carrinho"
+          class="flex justify-center items-center gap-4 bg-laranja hover:bg-laranja/80 transition-all duration-300 w-full lg:w-2/3 py-4 rounded-xl shadow-lg shadow-laranja/50">
+          <svg class="scale-90" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+              fill="#ffffff" fill-rule="nonzero" />
+          </svg>
+          <p class="font-kumbh font-bold text-white text-lg lg:text-base text-center">Adicionar ao carrinho</p>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full pt-20 lg:pt-28 pb-4">
+    <p class="font-kumbh font-normal text-sm text-center text-azul-escuro-acinzentado">Challenge by <a
+        class="italic text-laranja" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+        Mentor</a>.<br>
+      Coded by <a class="italic text-laranja" href="https://leticyaalbuquerque.github.io/">Letícia Rodrigues</a>.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
