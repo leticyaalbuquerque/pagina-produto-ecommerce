@@ -38,19 +38,24 @@
           class="opacity-0 md:opacity-100 transition-transform duration-500 -translate-x-[400px] md:translate-x-0 absolute top-0 left-0 bg-white md:bg-transparent px-6 pt-24 md:pt-0 w-2/3 sm:w-1/2 h-screen md:w-auto md:h-auto md:relative md:flex md:gap-4 lg:gap-8 font-kumbh font-semibold md:font-normal text-lg md:text-sm text-azul-escuro md:text-azul-escuro-acinzentado">
           <li
             class="pb-4 md:pb-0 hover:scale-105 hover:text-azul-escuro hover:border-solid hover:border-b-2 hover:border-laranja">
-            <a href="#">Coleções</a></li>
+            <a href="#">Coleções</a>
+          </li>
           <li
             class="pb-4 md:pb-0 hover:scale-105 hover:text-azul-escuro hover:border-solid hover:border-b-2 hover:border-laranja">
-            <a href="#">Masculino</a></li>
+            <a href="#">Masculino</a>
+          </li>
           <li
             class="pb-4 md:pb-0 hover:scale-105 hover:text-azul-escuro hover:border-solid hover:border-b-2 hover:border-laranja">
-            <a href="#">Feminino</a></li>
+            <a href="#">Feminino</a>
+          </li>
           <li
             class="pb-4 md:pb-0 hover:scale-105 hover:text-azul-escuro hover:border-solid hover:border-b-2 hover:border-laranja">
-            <a href="#">Sobre</a></li>
+            <a href="#">Sobre</a>
+          </li>
           <li
             class="pb-4 md:pb-0 hover:scale-105 hover:text-azul-escuro hover:border-solid hover:border-b-2 hover:border-laranja">
-            <a href="#">Contato</a></li>
+            <a href="#">Contato</a>
+          </li>
         </ul>
       </nav>
       <img src="assets/images/logo.svg" alt="Logo Sneakers" class="w-3/4">
@@ -58,7 +63,8 @@
     <div class="flex justify-center items-center gap-6 relative">
       <div class="relative">
         <img id="carrinho" src="assets/images/icon-cart.svg" alt="Ícone carrinho" class="cursor-pointer">
-        <span id="qtd-carrinho" class="hidden absolute -top-2 -right-2 rounded-full bg-laranja font-kumbh font-semibold text-[10px] text-white text-center w-4">1</span>
+        <span id="qtd-carrinho"
+          class="hidden absolute -top-2 -right-2 rounded-full bg-laranja font-kumbh font-semibold text-[10px] text-white text-center w-4">1</span>
       </div>
       <div class="w-8 md:w-10 lg:w-12 rounded-full border-solid border-2 border-laranja cursor-pointer">
         <img src="assets/images/image-avatar.png" alt="Avatar perfil" class="object-cover">
@@ -82,16 +88,19 @@
       </div>
       <hr>
       <div class="h-3/4 w-full flex flex-col items-center justify-center gap-4">
-        <div class="w-full px-6 flex items-center justify-between">
+        <div class="w-full px-6 flex items-center justify-between gap-3">
           <div class="rounded-md overflow-hidden w-16 md:w-12">
             <img src="assets/images/image-product-1-thumbnail.jpg" alt="miniatura produto">
           </div>
-          <div class="flex flex-col gap-1">
-            <p class="font-kumbh font-normal text-base md:text-sm text-start text-azul-escuro-acinzentado">Fall Limited Edition
+          <div class="flex flex-col">
+            <p class="font-kumbh font-normal text-base md:text-sm text-start text-azul-escuro-acinzentado">Fall Limited
+              Edition
               Sneakers</p>
             <div class="flex items-center gap-4">
-              <p class="font-kumbh font-normal text-base md:text-sm text-start text-azul-escuro-acinzentado">$125.00 x <span id="label-qtd-produto" class="w-4">0</span></p>
-              <p id="preco-total" class="font-kumbh font-bold text-base md:text-sm text-start text-azul-escuro">$0.00</p>
+              <p class="font-kumbh font-normal text-base md:text-sm text-start text-azul-escuro-acinzentado">$125.00 x
+                <span id="label-qtd-produto" class="w-4">0</span></p>
+              <p id="preco-total" class="font-kumbh font-bold text-base md:text-sm text-start text-azul-escuro">$0.00
+              </p>
             </div>
           </div>
           <div id="delete" class="cursor-pointer">
@@ -110,20 +119,20 @@
   <main class="md:px-8 lg:px-16 md:flex md:items-center md:gap-16 lg:gap-20 xl:gap-28">
     <section class="md:w-1/2">
       <div class="relative mx-auto">
-        <div class="slides w-full h-full md:rounded-xl overflow-hidden">
+        <div class="slides w-full h-full md:rounded-xl overflow-hidden cursor-pointer">
           <img src="assets/images/image-product-1.jpg" alt="Imagem produto" class="object-cover">
         </div>
-        <div class="slides w-full h-full md:rounded-xl overflow-hidden">
+        <div class="slides w-full h-full md:rounded-xl overflow-hidden cursor-pointer">
           <img src="assets/images/image-product-2.jpg" alt="Imagem produto" class="object-cover object-top">
         </div>
-        <div class="slides w-full h-full md:rounded-xl overflow-hidden">
+        <div class="slides w-full h-full md:rounded-xl overflow-hidden cursor-pointer">
           <img src="assets/images/image-product-3.jpg" alt="Imagem produto" class="object-cover object-top">
         </div>
-        <div class="slides w-full h-full md:rounded-xl overflow-hidden">
+        <div class="slides w-full h-full md:rounded-xl overflow-hidden cursor-pointer">
           <img src="assets/images/image-product-4.jpg" alt="Imagem produto" class="object-cover">
         </div>
 
-        <div class="z-30 absolute flex justify-between top-1/2 w-full px-3">
+        <div class="z-30 absolute flex justify-between md:hidden top-1/2 w-full px-3">
           <button id="prev" name="botao voltar" class="bg-white rounded-full p-3 md:p-2 lg:p-3">
             <img src="assets/images/icon-previous.svg" alt="ícone voltar">
           </button>
@@ -131,20 +140,76 @@
             <img src="assets/images/icon-next.svg" alt="ícone avançar">
           </button>
         </div>
-
       </div>
       <div class="hidden md:grid grid-cols-4 gap-6 pt-6">
         <div class="thumbnails rounded-lg w-full h-full overflow-hidden cursor-pointer bg-white">
-          <img src="assets/images/image-product-1-thumbnail.jpg" alt="thumbnail produto" class="object-cover hover:opacity-40">
+          <img src="assets/images/image-product-1-thumbnail.jpg" alt="thumbnail produto"
+            class="object-cover hover:opacity-40">
         </div>
         <div class="thumbnails rounded-lg w-full h-full overflow-hidden cursor-pointer bg-white">
-          <img src="assets/images/image-product-2-thumbnail.jpg" alt="thumbnail produto" class="object-cover hover:opacity-40">
+          <img src="assets/images/image-product-2-thumbnail.jpg" alt="thumbnail produto"
+            class="object-cover hover:opacity-40">
         </div>
         <div class="thumbnails rounded-lg w-full h-full overflow-hidden cursor-pointer bg-white">
-          <img src="assets/images/image-product-3-thumbnail.jpg" alt="thumbnail produto" class="object-cover hover:opacity-40">
+          <img src="assets/images/image-product-3-thumbnail.jpg" alt="thumbnail produto"
+            class="object-cover hover:opacity-40">
         </div>
         <div class="thumbnails rounded-lg w-full h-full overflow-hidden cursor-pointer bg-white">
-          <img src="assets/images/image-product-4-thumbnail.jpg" alt="thumbnail produto" class="object-cover hover:opacity-40">
+          <img src="assets/images/image-product-4-thumbnail.jpg" alt="thumbnail produto"
+            class="object-cover hover:opacity-40">
+        </div>
+      </div>
+    </section>
+
+    <!-- LightBox -->
+    <section id="lightbox-modal" class="hidden absolute mx-auto -left-1/2 -right-1/2 top-20 md:w-1/2 lg:w-1/3 z-[99999]">
+      <div class="relative mx-auto">
+        <div id="fechar-lightbox" class="w-full flex justify-end pb-6">
+          <svg class="scale-125 cursor-pointer" width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+              fill="#ffffff" fill-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="lightbox w-full h-full rounded-xl overflow-hidden">
+          <img src="assets/images/image-product-1.jpg">
+        </div>
+        <div class="lightbox w-full h-full rounded-xl overflow-hidden">
+          <img src="assets/images/image-product-2.jpg">
+        </div>
+        <div class="lightbox w-full h-full rounded-xl overflow-hidden">
+          <img src="assets/images/image-product-3.jpg">
+        </div>
+        <div class="lightbox w-full h-full rounded-xl overflow-hidden">
+          <img src="assets/images/image-product-4.jpg">
+        </div>
+
+        <div class="z-[99999] absolute flex justify-between top-1/2 w-full px-3">
+          <button id="prev-box" name="botao voltar" class="bg-white rounded-full p-3 md:p-2 lg:p-3">
+            <img src="assets/images/icon-previous.svg" alt="ícone voltar">
+          </button>
+          <button id="next-box" name="botao avançar" class="bg-white rounded-full p-3 md:p-2 lg:p-3">
+            <img src="assets/images/icon-next.svg" alt="ícone avançar">
+          </button>
+        </div>
+      </div>
+
+      <div class="hidden md:grid grid-cols-4 gap-6 pt-6 lg:mx-8 xl:mx-10">
+        <div class="thumbnails-box rounded-lg w-full h-full overflow-hidden cursor-pointer bg-white">
+          <img src="assets/images/image-product-1-thumbnail.jpg" alt="thumbnail produto"
+            class="object-cover hover:opacity-40">
+        </div>
+        <div class="thumbnails-box rounded-lg w-full h-full overflow-hidden cursor-pointer bg-white">
+          <img src="assets/images/image-product-2-thumbnail.jpg" alt="thumbnail produto"
+            class="object-cover hover:opacity-40">
+        </div>
+        <div class="thumbnails-box rounded-lg w-full h-full overflow-hidden cursor-pointer bg-white">
+          <img src="assets/images/image-product-3-thumbnail.jpg" alt="thumbnail produto"
+            class="object-cover hover:opacity-40">
+        </div>
+        <div class="thumbnails-box rounded-lg w-full h-full overflow-hidden cursor-pointer bg-white">
+          <img src="assets/images/image-product-4-thumbnail.jpg" alt="thumbnail produto"
+            class="object-cover hover:opacity-40">
         </div>
       </div>
     </section>

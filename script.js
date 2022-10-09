@@ -56,6 +56,63 @@ thumbnails.forEach((element, index) => {
   element.addEventListener("click", () => currentSlide(index + 1));
 });
 
+//LightBox Slider
+let lightBox = document.getElementsByClassName("lightbox");
+let thumbnailsBox = document.querySelectorAll(".thumbnails-box");
+let lightboxProduto = document.querySelectorAll(".slides");
+const modalLightbox = document.getElementById("lightbox-modal");
+const fecharLightbox = document.getElementById("fechar-lightbox");
+const btnPrevBox = document.getElementById("prev-box");
+const btnNextBox = document.getElementById("next-box");
+
+let slideIndexBox = 1;
+showSlidesBox(slideIndexBox);
+
+function plusSlidesBox(e) {
+  showSlidesBox((slideIndexBox += e));
+}
+
+function currentSlideBox(e) {
+  showSlidesBox((slideIndexBox = e));
+}
+
+function showSlidesBox(e) {
+  if (e > lightBox.length) {
+    slideIndexBox = 1;
+  }
+  if (e < 1) {
+    slideIndexBox = lightBox.length;
+  }
+
+  for (let i = 0; i < lightBox.length; i++) {
+    lightBox[i].style.display = "none";
+  }
+
+  lightBox[slideIndexBox - 1].style.display = "block";
+  thumbnailsBox.forEach((element) => {
+    element.classList.remove("active");
+  });
+  thumbnailsBox[slideIndexBox - 1].classList.toggle("active");
+}
+btnPrevBox.addEventListener("click", () => plusSlidesBox(-1));
+btnNextBox.addEventListener("click", () => plusSlidesBox(1));
+thumbnailsBox.forEach((element, index) => {
+  element.addEventListener("click", () => currentSlideBox(index + 1));
+});
+
+lightboxProduto.forEach((e) => {
+  e.addEventListener("click", () => {
+    if(window.innerWidth < 768) return
+    bgEscuro.classList.toggle("hidden");
+    modalLightbox.classList.toggle("hidden");
+  });
+});
+
+fecharLightbox.addEventListener("click", () => {
+  bgEscuro.classList.toggle("hidden");
+  modalLightbox.classList.toggle("hidden");
+});
+
 //Carrinho de Compras
 
 let produto = {
@@ -84,15 +141,15 @@ function atualizarCarrinho() {
 }
 
 function deletarProduto() {
-    produto.qtd = 0
-    modalCarrinhoCheio.classList.add('hidden')
-    modalCarrinho.classList.add("hidden");
-    labelCarrinho.textContent = ''
-    labelCarrinho.classList.add("hidden")
+  produto.qtd = 0;
+  modalCarrinhoCheio.classList.add("hidden");
+  modalCarrinho.classList.add("hidden");
+  labelCarrinho.textContent = "";
+  labelCarrinho.classList.add("hidden");
 }
 
 btnAdicionar.addEventListener("click", atualizarCarrinho);
-btnDeletar.addEventListener("click", deletarProduto)
+btnDeletar.addEventListener("click", deletarProduto);
 
 const diminuir = document.getElementById("diminuir");
 const aumentar = document.getElementById("aumentar");
